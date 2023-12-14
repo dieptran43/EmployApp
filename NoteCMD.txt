@@ -1,0 +1,33 @@
+create new Solution
+
+dotnet Version
+dotnet new webapi --use-controllers -o AppName
+cd AppName
+
+dotnet add package Microsoft.EntityFrameworkCore.InMemory
+
+dotnet run --launch-profile https
+dotnet run --launch-profile https
+
+dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
+dotnet add package Microsoft.EntityFrameworkCore.Design
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+dotnet tool uninstall -g dotnet-aspnet-codegenerator
+dotnet tool install -g dotnet-aspnet-codegenerator
+dotnet tool update -g dotnet-aspnet-codegenerator
+dotnet add package Microsoft.EntityFrameworkCore.Tools
+
+--Tạo controllers auto
+dotnet aspnet-codegenerator controller -name EmployeesController -async -api -m Employee -dc TodoContext -outDir Controller
+
+FrontEnd
+
+npx create-react-app employee-app
+cd employee-app
+
+npm install axios
+
+npm install react-router-dom
+
+---bootstrap
+yarn add react-bootstrap bootstrap
